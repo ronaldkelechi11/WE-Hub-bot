@@ -50,6 +50,8 @@ class Customer_Queries:
                 "message": res
             }
 
+
+
     def get_user(self, tel):
         create_url = self.url + tel
         r = requests.get(create_url)

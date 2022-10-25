@@ -1,4 +1,4 @@
-# WE-HUB bot
+  # WE-HUB bot
 
 Code for the chatbot we're working on
 
@@ -20,7 +20,7 @@ Code for the chatbot we're working on
 
 ## Requirements
 
-Before proceeding, you should install;
+Before proceeding, you should before hand install or have installed;
 
 - [Python 3.10.6](https://www.python.org/downloads/release/python-3106/)
 - Node JS 14 and above - [download](https://nodejs.org/en/download/)

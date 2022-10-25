@@ -13,14 +13,14 @@ app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = True
 app.config["SESSION_TYPE"] = "filesystem"
 
-""" Session is to expire after 2 hours """
+""" Session is to expire after 2 hours :Should be revised to 3 hours"""
 app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(hours=2)
 app.config.from_object(__name__)
 Session(app)
 
 """ Function to check if the node backend is online"""
 def backend_ready():
-    """ Make a request to the root url which is to return 'online' """
+    """ Make a request to the root url which returns 'online' """
     try:
         backend_url = backend_params("root_url")
         r = requests.get(backend_url)
@@ -41,6 +41,7 @@ class Session_handlers:
     def retrieve_tel_session(self, tel):
         tel = str(tel)
         return session[tel]
+
 
 """ The endpoint that twilio sends the request to. Root endpoint that's gonna handle our replies and stuff """
 @app.route("/", methods=['POST'])
